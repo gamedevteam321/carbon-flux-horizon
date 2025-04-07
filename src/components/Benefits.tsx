@@ -12,10 +12,10 @@ interface BenefitProps {
 const Benefit = ({ icon, label }: BenefitProps) => {
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="w-16 h-16 mb-4 flex items-center justify-center bg-secondary rounded-full">
-        {icon}
+      <div className="w-16 h-16 mb-4 flex items-center justify-center bg-secondary rounded-full border border-border">
+        <div className="text-primary">{icon}</div>
       </div>
-      <span className="font-montserrat uppercase tracking-wide text-sm">{label}</span>
+      <span className="font-montserrat uppercase tracking-wide text-sm font-medium">{label}</span>
     </div>
   );
 };
