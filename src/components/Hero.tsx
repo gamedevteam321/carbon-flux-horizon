@@ -1,4 +1,3 @@
-
 import { Button } from './ui/button';
 import { ChevronDown } from 'lucide-react';
 
@@ -13,16 +12,16 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-background/70 z-10"></div>
+      <div className="absolute inset-0 z-0 w-full h-full">
+        
         <video 
-          className="w-full h-full object-cover" 
+          className="w-full h-full object-stretche min-w-full min-h-full" 
           autoPlay 
           loop 
           muted 
           playsInline
         >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-industrial-factory-smoke-2157-large.mp4" type="video/mp4" />
+          <source src="/Biochar.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -30,7 +29,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center">
         <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary font-montserrat font-bold leading-tight mb-6 animate-fade-in">
+          <h1 className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-primary font-montserrat font-semibold leading-tight mb-6 animate-fade-in">
             Scalable Carbon Solutions for a Sustainable Future
           </h1>
           <h3 className="text-xl md:text-2xl text-primary/80 font-light mb-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>

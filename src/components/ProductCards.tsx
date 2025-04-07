@@ -1,11 +1,8 @@
-
-import { Card } from './ui/card';
 import { motion } from 'framer-motion';
 import { AspectRatio } from './ui/aspect-ratio';
 
 interface ProductCardProps {
   title: string;
-  description: string;
   imageUrl: string;
 }
 
@@ -16,17 +13,17 @@ const ProductCard = ({ title, imageUrl }: ProductCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="relative overflow-hidden rounded-2xl"
+      className="relative overflow-hidden rounded-2xl shadow-2xl shadow-black/50 ring-1 ring-white/50"
     >
       <AspectRatio ratio={1/1} className="bg-black">
-        <div className="absolute inset-0 bg-black/30 z-10"></div>
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img 
           src={imageUrl} 
           alt={title} 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <h3 className="font-montserrat font-bold text-4xl md:text-5xl text-white uppercase tracking-wider">
+          <h3 className="font-montserrat font-bold text-xl md:text-2xl text-white uppercase tracking-wider text-center">
             {title}
           </h3>
         </div>
@@ -39,18 +36,15 @@ const ProductCards = () => {
   const products = [
     {
       title: "Biochar",
-      description: "Carbon-rich material made from biomass that improves soil health and sequesters carbon.",
-      imageUrl: "https://images.unsplash.com/photo-1638367709763-2655b7e97019?q=80&w=800&auto=format&fit=crop"
+      imageUrl: "src/assets/biochar.png"
     },
     {
       title: "Biocoal",
-      description: "Alternative to fossil fuels created from organic matter for sustainable energy production.",
-      imageUrl: "https://images.unsplash.com/photo-1611273426858-450e7978afad?q=80&w=800&auto=format&fit=crop"
+      imageUrl: "src/assets/biocoal.png"
     },
     {
       title: "Wood Vinegar",
-      description: "Natural byproduct of pyrolysis used in agriculture as a biopesticide and growth enhancer.",
-      imageUrl: "https://images.unsplash.com/photo-1635397156160-ef08d893e679?q=80&w=800&auto=format&fit=crop"
+      imageUrl: "src/assets/woodvinegar.png"
     }
   ];
 
@@ -58,9 +52,9 @@ const ProductCards = () => {
     <section id="our-biocarbon" className="bg-black text-white py-24 px-4 md:px-6">
       <div className="container mx-auto">
         <div className="text-left mb-16">
-          <h2 className="font-montserrat font-bold text-5xl md:text-6xl mb-3 text-white/90">Our Biocarbons</h2>
-          <p className="text-white/80 text-xl md:text-2xl max-w-3xl">
-            Pioneering next generation carbon solutions
+          <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-3 text-white/90">Our Biocarbons</h2>
+          <p className="text-white/60 text-xl md:text-1xl max-w-2xl">
+          We transform organic residues to sustainable products
           </p>
         </div>
         
