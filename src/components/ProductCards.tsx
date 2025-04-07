@@ -18,7 +18,7 @@ const ProductCard = ({ title, imageUrl }: ProductCardProps) => {
       <AspectRatio ratio={1/1} className="bg-black">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img 
-          src={imageUrl} 
+          src={`${import.meta.env.BASE_URL}${imageUrl}`} 
           alt={title} 
           className="w-full h-full object-cover"
         />
@@ -36,15 +36,15 @@ const ProductCards = () => {
   const products = [
     {
       title: "Biochar",
-      imageUrl: "src/assets/biochar.png"
+      imageUrl: "images/biochar.png"
     },
     {
       title: "Biocoal",
-      imageUrl: "src/assets/biocoal.png"
+      imageUrl: "images/biocoal.png"
     },
     {
       title: "Wood Vinegar",
-      imageUrl: "src/assets/woodvinegar.png"
+      imageUrl: "images/woodvinegar.png"
     }
   ];
 
