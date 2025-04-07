@@ -38,7 +38,7 @@ const OurPlan = () => {
   };
 
   return (
-    <section className="bg-black text-white py-24 px-4 md:px-6">
+    <section className="bg-background text-foreground py-24 px-4 md:px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl">OUR PLAN</h2>
@@ -56,13 +56,13 @@ const OurPlan = () => {
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div className="order-2 md:order-1">
                       <h3 className="font-montserrat text-2xl mb-4">{plan.title}</h3>
-                      <p className="text-gray-400 mb-6">{plan.description}</p>
+                      <p className="text-muted-foreground mb-6">{plan.description}</p>
                       <div className="flex items-center space-x-2">
                         {plans.map((_, idx) => (
                           <button
                             key={idx}
                             className={`w-2 h-2 rounded-full ${
-                              idx === currentSlide ? 'bg-white' : 'bg-gray-600'
+                              idx === currentSlide ? 'bg-sidebar-primary' : 'bg-muted'
                             }`}
                             onClick={() => setCurrentSlide(idx)}
                           />
@@ -88,7 +88,7 @@ const OurPlan = () => {
           <Button 
             variant="outline" 
             size="icon" 
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black/50 border-white/20 text-white rounded-full"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-background/50 border-sidebar-primary text-sidebar-primary rounded-full"
             onClick={prevSlide}
           >
             <ChevronLeft size={24} />
@@ -96,7 +96,7 @@ const OurPlan = () => {
           <Button 
             variant="outline" 
             size="icon" 
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black/50 border-white/20 text-white rounded-full"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-background/50 border-sidebar-primary text-sidebar-primary rounded-full"
             onClick={nextSlide}
           >
             <ChevronRight size={24} />

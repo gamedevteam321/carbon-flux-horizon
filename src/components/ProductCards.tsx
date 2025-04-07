@@ -10,7 +10,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ title, description, imageUrl }: ProductCardProps) => {
   return (
-    <Card className="overflow-hidden group bg-transparent border border-gray-800 hover:border-white transition-all duration-300">
+    <Card className="overflow-hidden group bg-transparent border border-border hover:border-primary transition-all duration-300">
       <div className="h-48 overflow-hidden">
         <img 
           src={imageUrl} 
@@ -20,7 +20,7 @@ const ProductCard = ({ title, description, imageUrl }: ProductCardProps) => {
       </div>
       <CardContent className="p-6">
         <h3 className="font-montserrat font-semibold text-xl mb-2">{title}</h3>
-        <p className="text-gray-400">{description}</p>
+        <p className="text-muted-foreground">{description}</p>
       </CardContent>
     </Card>
   );
@@ -51,11 +51,11 @@ const ProductCards = () => {
   ];
 
   return (
-    <section id="our-biocarbon" className="bg-black text-white py-24 px-4 md:px-6">
+    <section id="our-biocarbon" className="bg-background text-foreground py-24 px-4 md:px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4">OUR BIOCARBON</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             We transform organic residues to sustainable products
           </p>
         </div>

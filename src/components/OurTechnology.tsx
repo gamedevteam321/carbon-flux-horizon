@@ -13,13 +13,13 @@ interface TechFeatureProps {
 
 const TechFeature = ({ icon, title, description }: TechFeatureProps) => {
   return (
-    <Card className="bg-gray-900 border-gray-800 hover:border-white transition-all duration-300">
+    <Card className="bg-secondary border-border hover:border-primary transition-all duration-300">
       <CardContent className="p-6 flex flex-col items-center text-center">
         <div className="w-12 h-12 mb-4 flex items-center justify-center">
           {icon}
         </div>
         <h3 className="font-montserrat font-semibold text-lg mb-2">{title}</h3>
-        <p className="text-gray-400 text-sm">{description}</p>
+        <p className="text-muted-foreground text-sm">{description}</p>
       </CardContent>
     </Card>
   );
@@ -75,11 +75,11 @@ const OurTechnology = () => {
   ];
 
   return (
-    <section id="technology" className="bg-black text-white py-24 px-4 md:px-6">
+    <section id="technology" className="bg-background text-foreground py-24 px-4 md:px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4">OUR TECHNOLOGY</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Our processing technology is scalable, efficient & robust
           </p>
         </div>

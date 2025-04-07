@@ -18,7 +18,7 @@ const QuoteSlider = () => {
   }, [quotes.length]);
 
   return (
-    <section className="bg-white text-black py-32 overflow-hidden relative">
+    <section className="bg-primary text-primary-foreground py-32 overflow-hidden relative">
       <div className="absolute inset-0 flex items-center justify-center opacity-5">
         <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
@@ -47,7 +47,7 @@ const QuoteSlider = () => {
             <button
               key={index}
               className={`w-2 h-2 rounded-full mx-1 ${
-                index === currentQuote ? 'bg-black' : 'bg-gray-300'
+                index === currentQuote ? 'bg-primary-foreground' : 'bg-primary-foreground/30'
               }`}
               onClick={() => setCurrentQuote(index)}
             />

@@ -12,7 +12,7 @@ interface BenefitProps {
 const Benefit = ({ icon, label }: BenefitProps) => {
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="w-16 h-16 mb-4 flex items-center justify-center bg-gray-900 rounded-full">
+      <div className="w-16 h-16 mb-4 flex items-center justify-center bg-secondary rounded-full">
         {icon}
       </div>
       <span className="font-montserrat uppercase tracking-wide text-sm">{label}</span>
@@ -34,7 +34,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="bg-gray-900 py-20 px-4 md:px-6">
+    <section className="bg-background py-20 px-4 md:px-6">
       <div className="container mx-auto">
         <div className="grid grid-cols-3 md:grid-cols-9 gap-8">
           {benefits.map((benefit, index) => (

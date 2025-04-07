@@ -10,12 +10,12 @@ interface TeamMemberProps {
 const TeamMember = ({ name, role, image }: TeamMemberProps) => {
   return (
     <div className="flex flex-col items-center text-center">
-      <Avatar className="w-28 h-28 mb-4 border-2 border-white">
+      <Avatar className="w-28 h-28 mb-4 border-2 border-sidebar-primary">
         <AvatarImage src={image} alt={name} className="grayscale" />
         <AvatarFallback>{name[0]}</AvatarFallback>
       </Avatar>
       <h4 className="font-montserrat font-semibold text-lg">{name}</h4>
-      <p className="text-gray-400 text-sm">{role}</p>
+      <p className="text-muted-foreground text-sm">{role}</p>
     </div>
   );
 };
@@ -45,12 +45,12 @@ const AboutUs = () => {
   ];
 
   return (
-    <section id="about-us" className="bg-gray-900 text-white py-24 px-4 md:px-6">
+    <section id="about-us" className="bg-secondary text-foreground py-24 px-4 md:px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-2">THE TIME IS NOW</h2>
           <h3 className="font-montserrat text-xl mb-8">ABOUT US</h3>
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-3xl mx-auto text-lg">
             We are a carbon project developer leveraging proprietary modular pyrolysis technology to 
             convert agricultural and forestry waste into biochar, addressing waste management challenges 
             while creating a product with substantial agricultural benefits and carbon removal potential.
@@ -70,7 +70,7 @@ const AboutUs = () => {
           <blockquote className="text-xl md:text-2xl font-montserrat italic mb-6">
             "Biochar is the most effective known solution to restore them & biomass waste has no better use than becoming biochar"
           </blockquote>
-          <cite className="text-gray-400">— Arjun Dhawan, Co-Founder, Nexchar</cite>
+          <cite className="text-muted-foreground">— Arjun Dhawan, Co-Founder, Nexchar</cite>
         </div>
       </div>
     </section>
