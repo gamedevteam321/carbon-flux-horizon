@@ -20,8 +20,9 @@ const Hero = () => {
           loop 
           muted 
           playsInline
+          preload="auto"
         >
-          <source src="/Biochar.mp4" type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}Biochar.mp4`} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
