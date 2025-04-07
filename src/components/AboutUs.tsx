@@ -1,4 +1,3 @@
-
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
 interface TeamMemberProps {
@@ -25,22 +24,7 @@ const AboutUs = () => {
     {
       name: "Arjun Dhawan",
       role: "Co-Founder",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop"
-    },
-    {
-      name: "Emma Chen",
-      role: "Chief Technology Officer",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop"
-    },
-    {
-      name: "Marcus Johnson",
-      role: "Head of Operations",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
-    },
-    {
-      name: "Priya Sharma",
-      role: "Lead Scientist",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
+      image: "/arjun.jpg"
     }
   ];
 
@@ -56,10 +40,19 @@ const AboutUs = () => {
             while creating a product with substantial agricultural benefits and carbon removal potential.
           </p>
         </div>
+
+        <div className="max-w-4xl mx-auto text-center mb-24">
+          <h2 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl mb-4">
+            1 Trillion
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground">
+            tons of CO₂ to be removed
+          </p>
+        </div>
         
         <div className="mb-24">
           <h3 className="font-montserrat font-semibold text-2xl mb-8 text-center">Our Team</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex justify-center">
             {team.map((member, index) => (
               <TeamMember key={index} {...member} />
             ))}
@@ -70,7 +63,7 @@ const AboutUs = () => {
           <blockquote className="text-xl md:text-2xl font-montserrat italic mb-6">
             "Biochar is the most effective known solution to restore them & biomass waste has no better use than becoming biochar"
           </blockquote>
-          <cite className="text-muted-foreground">— Arjun Dhawan, Co-Founder, Nexchar</cite>
+          <cite className="text-muted-foreground">— Arjun Dhawan</cite>
         </div>
       </div>
     </section>

@@ -30,7 +30,7 @@ const Projects = () => {
             </div>
             <div className="absolute -bottom-6 -left-6 w-2/3 h-24 bg-background border border-border flex items-center justify-center">
               <p className="text-xl font-montserrat">
-                <span className="text-4xl font-bold text-sidebar-primary">1M+</span> <span className="text-primary">tons of CO₂ removed</span>
+                <span className="text-2xl font-bold text-sidebar-primary">1 Trillion</span> <span className="text-primary">tons of CO₂ to be removed</span>
               </p>
             </div>
           </div>
