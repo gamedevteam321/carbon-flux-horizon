@@ -36,15 +36,15 @@ const ProductCards = () => {
   const products = [
     {
       title: "Biochar",
-      imageUrl: "images/biochar.png"
+      imageUrl: "biochar.png"
     },
     {
       title: "Biocoal",
-      imageUrl: "images/biocoal.png"
+      imageUrl: "biocoal.png"
     },
     {
       title: "Wood Vinegar",
-      imageUrl: "images/woodvinegar.png"
+      imageUrl: "woodvinegar.png"
     }
   ];
 
