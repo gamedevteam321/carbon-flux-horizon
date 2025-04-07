@@ -42,11 +42,6 @@ const ProductCards = () => {
       title: "Wood Vinegar",
       description: "Natural byproduct of pyrolysis used in agriculture as a biopesticide and growth enhancer.",
       imageUrl: "https://images.unsplash.com/photo-1635397156160-ef08d893e679?q=80&w=800&auto=format&fit=crop"
-    },
-    {
-      title: "Bio Tar",
-      description: "High-value organic compound used in industrial processes and production of sustainable chemicals.",
-      imageUrl: "https://images.unsplash.com/photo-1518623001779-bdda3bf225e6?q=80&w=800&auto=format&fit=crop"
     }
   ];
 
@@ -60,7 +55,7 @@ const ProductCards = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
