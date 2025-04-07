@@ -1,6 +1,7 @@
 
-import { Card, CardContent } from './ui/card';
+import { Card } from './ui/card';
 import { motion } from 'framer-motion';
+import { AspectRatio } from './ui/aspect-ratio';
 
 interface ProductCardProps {
   title: string;
@@ -8,21 +9,29 @@ interface ProductCardProps {
   imageUrl: string;
 }
 
-const ProductCard = ({ title, description, imageUrl }: ProductCardProps) => {
+const ProductCard = ({ title, imageUrl }: ProductCardProps) => {
   return (
-    <Card className="overflow-hidden group bg-transparent border border-border hover:border-sidebar-primary transition-all duration-300 shadow-md">
-      <div className="h-48 overflow-hidden">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="relative overflow-hidden rounded-2xl"
+    >
+      <AspectRatio ratio={1/1} className="bg-black">
+        <div className="absolute inset-0 bg-black/30 z-10"></div>
         <img 
           src={imageUrl} 
           alt={title} 
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale"
+          className="w-full h-full object-cover"
         />
-      </div>
-      <CardContent className="p-6">
-        <h3 className="font-montserrat font-semibold text-xl mb-2 text-primary">{title}</h3>
-        <p className="text-foreground">{description}</p>
-      </CardContent>
-    </Card>
+        <div className="absolute inset-0 z-20 flex items-center justify-center">
+          <h3 className="font-montserrat font-bold text-4xl md:text-5xl text-white uppercase tracking-wider">
+            {title}
+          </h3>
+        </div>
+      </AspectRatio>
+    </motion.div>
   );
 };
 
@@ -46,16 +55,16 @@ const ProductCards = () => {
   ];
 
   return (
-    <section id="our-biocarbon" className="bg-background text-foreground py-24 px-4 md:px-6">
+    <section id="our-biocarbon" className="bg-black text-white py-24 px-4 md:px-6">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-montserrat font-bold text-3xl md:text-4xl mb-4 text-primary">OUR BIOCARBON</h2>
-          <p className="text-foreground max-w-2xl mx-auto text-lg">
-            We transform organic residues to sustainable products
+        <div className="text-left mb-16">
+          <h2 className="font-montserrat font-bold text-5xl md:text-6xl mb-3 text-white/90">Our Biocarbons</h2>
+          <p className="text-white/80 text-xl md:text-2xl max-w-3xl">
+            Pioneering next generation carbon solutions
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
